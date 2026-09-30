@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios · Cidade Melhor</title>
+  <meta name="description" content="Indicadores e gráficos dos problemas urbanos reportados em Sorocaba.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/relatorios.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="pagina-topo">
+      <div class="container">
+        <span class="sobretitulo">Transparência</span>
+        <h1>Relatórios e indicadores</h1>
+        <p>Números atualizados automaticamente a partir das ocorrências registradas pela comunidade.</p>
+      </div>
+    </section>
+
+    <section class="pagina-conteudo">
+      <div class="container" id="conteudo">
+        <div class="indicadores indicadores-6" id="resumo"></div>
+        <div class="grade-graficos">
+          <div class="card card-corpo grafico-largo">
+            <h2 class="card-titulo">Problemas por categoria</h2>
+            <div class="grafico"><canvas id="grafico-categorias" aria-label="Gráfico de barras: problemas por categoria" role="img"></canvas></div>
+          </div>
+          <div class="card card-corpo">
+            <h2 class="card-titulo">Problemas por status</h2>
+            <div class="grafico grafico-rosca"><canvas id="grafico-status" aria-label="Gráfico de rosca: problemas por status" role="img"></canvas></div>
+          </div>
+          <div class="card card-corpo grafico-largo">
+            <h2 class="card-titulo">Reportados x resolvidos por mês</h2>
+            <div class="grafico"><canvas id="grafico-meses" aria-label="Gráfico de linhas: problemas por mês" role="img"></canvas></div>
+          </div>
+          <div class="card card-corpo">
+            <h2 class="card-titulo">Top 5 mais votadas</h2>
+            <ol class="ranking" id="ranking"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/lucide@1.49.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <script type="module" src="js/pages/relatorios.js"></script>
+</body>
+</html>

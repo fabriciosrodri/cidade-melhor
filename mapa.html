@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de ocorrências · Cidade Melhor</title>
+  <meta name="description" content="Veja no mapa os problemas urbanos reportados em Sorocaba e confirme os relatos da comunidade.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/mapa.css">
+</head>
+<body class="pagina-mapa">
+  <div id="header"></div>
+
+  <main class="mapa-layout">
+    <!-- Sidebar com categorias e filtros (vira "gaveta" no celular) -->
+    <aside class="mapa-sidebar" id="sidebar" aria-label="Filtros do mapa">
+      <div class="sidebar-topo-mobile">
+        <strong>Filtros</strong>
+        <button type="button" class="btn-icone" id="fechar-sidebar" aria-label="Fechar filtros"></button>
+      </div>
+      <div id="sidebar-conteudo"></div>
+    </aside>
+    <div class="sidebar-fundo" id="sidebar-fundo" hidden></div>
+
+    <!-- Área do mapa -->
+    <section class="mapa-area">
+      <div id="mapa" class="mapa" aria-label="Mapa de ocorrências de Sorocaba"></div>
+
+      <div class="mapa-topo">
+        <div id="busca" class="mapa-busca"></div>
+        <button type="button" class="btn btn-secundario btn-filtros-mobile" id="abrir-sidebar"></button>
+      </div>
+
+      <div class="mapa-controles" id="mapa-controles"></div>
+      <div class="mapa-legenda" id="mapa-legenda"></div>
+      <a href="reportar.html" class="btn btn-primario btn-reportar-flutuante" id="reportar-flutuante" aria-label="Reportar problema"></a>
+
+      <div class="mapa-carregando" id="mapa-carregando">
+        <span class="spinner spinner-grande"></span>
+        <span>Carregando ocorrências...</span>
+      </div>
+
+      <!-- Painel com os detalhes do pin clicado (vira "bottom sheet" no celular) -->
+      <aside class="painel-ocorrencia" id="painel" aria-label="Detalhes da ocorrência" hidden></aside>
+    </section>
+  </main>
+
+  <!-- Barra de indicadores -->
+  <div class="mapa-indicadores" id="mapa-indicadores"></div>
+
+  <script src="https://unpkg.com/lucide@1.49.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script type="module" src="js/pages/mapa.js"></script>
+</body>
+</html>

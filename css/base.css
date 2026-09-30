@@ -1,0 +1,207 @@
+/* ===== RESET E TIPOGRAFIA BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--fonte);
+  font-size: var(--texto-md);
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fundo);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.icone {
+  flex-shrink: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--azul-escuro);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+h1 { font-size: var(--texto-3xl); }
+h2 { font-size: var(--texto-2xl); }
+h3 { font-size: var(--texto-lg); }
+
+p {
+  color: var(--texto-suave);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Foco visível para quem navega pelo teclado */
+:focus-visible {
+  outline: 2px solid var(--azul);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--azul-medio);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ===== UTILITÁRIOS ===== */
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 var(--esp-6);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 var(--esp-4);
+  }
+}
+
+.secao {
+  padding: var(--esp-20) 0;
+}
+
+.secao-suave {
+  background: var(--fundo-suave);
+}
+
+.secao-cabecalho {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto var(--esp-12);
+}
+
+.secao-cabecalho p {
+  margin-top: var(--esp-3);
+  font-size: var(--texto-lg);
+}
+
+.sobretitulo {
+  display: inline-block;
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--azul);
+  margin-bottom: var(--esp-3);
+}
+
+.destaque-azul {
+  color: var(--azul);
+}
+
+/* Texto só para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Cabeçalho padrão das páginas internas */
+.pagina-topo {
+  padding: var(--esp-12) 0 var(--esp-8);
+  background: linear-gradient(180deg, var(--fundo-suave), var(--fundo));
+  border-bottom: 1px solid var(--borda);
+}
+
+.pagina-topo h1 {
+  font-size: var(--texto-3xl);
+}
+
+.pagina-topo p {
+  margin-top: var(--esp-2);
+  font-size: var(--texto-lg);
+  max-width: 680px;
+}
+
+.pagina-conteudo {
+  padding: var(--esp-10) 0 var(--esp-16);
+}
+
+@media (max-width: 600px) {
+  .secao {
+    padding: var(--esp-12) 0;
+  }
+
+  .pagina-topo {
+    padding: var(--esp-8) 0 var(--esp-6);
+  }
+
+  .pagina-topo h1 {
+    font-size: var(--texto-2xl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

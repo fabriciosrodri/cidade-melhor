@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportar problema · Cidade Melhor</title>
+  <meta name="description" content="Registre um problema urbano de Sorocaba no mapa.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/reportar.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="pagina-topo">
+      <div class="container">
+        <a href="mapa.html" class="link-voltar" id="link-voltar"></a>
+        <h1 id="titulo-pagina">Reportar problema</h1>
+        <p id="subtitulo-pagina">Marque o local no mapa e descreva o que está acontecendo. Quanto mais detalhes, mais fácil de resolver.</p>
+      </div>
+    </section>
+
+    <section class="pagina-conteudo">
+      <div class="container" id="conteudo-formulario">
+        <form id="form-ocorrencia" class="grade-reportar" novalidate>
+          <!-- Coluna do mapa -->
+          <div class="card card-corpo coluna-mapa">
+            <h2 class="card-titulo"><span class="numero-etapa">1</span> Onde fica o problema?</h2>
+            <p class="dica-mapa" id="dica-mapa"></p>
+            <div id="mapa-selecao" class="mapa-selecao" aria-label="Mapa para escolher o local do problema"></div>
+            <div class="acoes-mapa">
+              <button type="button" class="btn btn-secundario btn-sm" id="usar-localizacao"></button>
+              <span class="coordenadas" id="coordenadas">Nenhum local escolhido</span>
+            </div>
+            <p class="campo-erro" id="erro-local"></p>
+
+            <div class="campo campo-endereco">
+              <label class="campo-label" for="endereco">Endereço</label>
+              <div class="campo-com-icone">
+                <input class="campo-input" type="text" id="endereco" placeholder="Rua, número ou ponto de referência" maxlength="120">
+                <span class="endereco-carregando" id="endereco-carregando" hidden><span class="spinner"></span></span>
+              </div>
+              <p class="campo-ajuda">Preenchido automaticamente ao clicar no mapa. Você pode ajustar.</p>
+              <p class="campo-erro"></p>
+            </div>
+
+            <div class="linha-campos">
+              <div class="campo">
+                <label class="campo-label" for="bairro">Bairro <span class="opcional">(opcional)</span></label>
+                <input class="campo-input" type="text" id="bairro" placeholder="Ex.: Centro" maxlength="60">
+              </div>
+              <div class="campo">
+                <label class="campo-label">Latitude / Longitude</label>
+                <div class="linha-coordenadas">
+                  <input class="campo-input" type="text" id="latitude" readonly aria-label="Latitude" placeholder="Latitude">
+                  <input class="campo-input" type="text" id="longitude" readonly aria-label="Longitude" placeholder="Longitude">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna dos dados -->
+          <div class="card card-corpo coluna-dados">
+            <h2 class="card-titulo"><span class="numero-etapa">2</span> O que está acontecendo?</h2>
+
+            <div class="campo">
+              <span class="campo-label" id="rotulo-categoria">Tipo do problema</span>
+              <div class="seletor-categorias" id="seletor-categorias" role="radiogroup" aria-labelledby="rotulo-categoria"></div>
+              <p class="campo-erro" id="erro-categoria"></p>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="titulo">Título</label>
+              <input class="campo-input" type="text" id="titulo" placeholder="Ex.: Buraco grande em frente ao nº 120" maxlength="80">
+              <p class="campo-ajuda"><span>Resuma o problema em poucas palavras.</span><span id="contador-titulo">0/80</span></p>
+              <p class="campo-erro"></p>
+            </div>
+
+            <div class="campo">
+              <label class="campo-label" for="descricao">Descrição</label>
+              <textarea class="campo-textarea" id="descricao" placeholder="Descreva o problema: tamanho, há quanto tempo existe, riscos para pedestres e motoristas..." maxlength="500"></textarea>
+              <p class="campo-ajuda"><span>Mínimo de 20 caracteres.</span><span id="contador-descricao">0/500</span></p>
+              <p class="campo-erro"></p>
+            </div>
+
+            <div class="campo">
+              <span class="campo-label">Fotos <span class="opcional">(opcional, até 3)</span></span>
+              <div class="fotos" id="fotos"></div>
+              <input type="file" id="entrada-fotos" accept="image/*" multiple hidden>
+              <p class="campo-erro" id="erro-fotos"></p>
+            </div>
+
+            <div class="aviso-automatico" id="aviso-automatico"></div>
+
+            <div class="acoes-formulario">
+              <a href="mapa.html" class="btn btn-secundario btn-lg" id="botao-cancelar">Cancelar</a>
+              <button type="submit" class="btn btn-primario btn-lg" id="botao-publicar">Publicar ocorrência</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/lucide@1.49.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="js/pages/reportar.js"></script>
+</body>
+</html>

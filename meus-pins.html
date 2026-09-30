@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus pins · Cidade Melhor</title>
+  <meta name="description" content="Acompanhe as ocorrências que você reportou no Cidade Melhor.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/listas.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="pagina-topo">
+      <div class="container">
+        <div class="topo-com-acao">
+          <div>
+            <h1>Meus pins</h1>
+            <p>Acompanhe os problemas que você reportou: votos da comunidade, comentários e andamento.</p>
+          </div>
+          <a href="reportar.html" class="btn btn-primario btn-lg" id="botao-novo"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pagina-conteudo">
+      <div class="container" id="conteudo">
+        <div class="indicadores" id="resumo"></div>
+        <div class="barra-lista">
+          <div class="abas" id="abas" role="tablist" aria-label="Filtrar por status"></div>
+          <label class="ordenacao">
+            <span>Ordenar por</span>
+            <select class="campo-select" id="ordenacao">
+              <option value="recentes">Mais recentes</option>
+              <option value="votados">Mais votados</option>
+            </select>
+          </label>
+        </div>
+        <div class="lista-ocorrencias" id="lista" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/lucide@1.49.0/dist/umd/lucide.min.js"></script>
+  <script type="module" src="js/pages/meus-pins.js"></script>
+</body>
+</html>

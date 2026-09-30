@@ -1,0 +1,231 @@
+/* ===== LISTAS: MEUS PINS E RESOLVIDOS ===== */
+.topo-com-acao {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--esp-6);
+  flex-wrap: wrap;
+}
+
+.pagina-conteudo .indicadores {
+  margin-bottom: var(--esp-8);
+}
+
+.barra-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp-4);
+  margin-bottom: var(--esp-6);
+  flex-wrap: wrap;
+}
+
+.barra-lista .abas {
+  max-width: 100%;
+}
+
+.ordenacao {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.ordenacao .campo-select,
+.filtros-linha .campo-select {
+  height: 40px;
+  width: auto;
+  min-width: 190px;
+}
+
+.filtros-linha {
+  display: flex;
+  gap: var(--esp-3);
+  flex-wrap: wrap;
+}
+
+.resultado-contagem {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.lista-ocorrencias {
+  display: grid;
+  gap: var(--esp-4);
+}
+
+/* ---------- Changelog (resolvidos) ---------- */
+.changelog-mes + .changelog-mes {
+  margin-top: var(--esp-10);
+}
+
+.changelog-mes h2 {
+  display: flex;
+  align-items: baseline;
+  gap: var(--esp-3);
+  font-size: var(--texto-xl);
+  margin-bottom: var(--esp-5);
+}
+
+.changelog-mes h2 span {
+  font-size: var(--texto-sm);
+  font-weight: 500;
+  color: var(--texto-suave);
+  letter-spacing: 0;
+}
+
+.changelog {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Linha vertical da linha do tempo */
+.changelog::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--borda);
+}
+
+.changelog-item {
+  position: relative;
+  display: flex;
+  gap: var(--esp-5);
+}
+
+.changelog-item + .changelog-item {
+  margin-top: var(--esp-4);
+}
+
+.changelog-marcador {
+  position: relative;
+  z-index: 1;
+  padding-top: var(--esp-5);
+}
+
+.changelog-marcador .bolinha-categoria {
+  box-shadow: 0 0 0 4px var(--branco);
+}
+
+.changelog-card {
+  flex: 1;
+  min-width: 0;
+  padding: var(--esp-5);
+  transition: box-shadow var(--transicao), border-color var(--transicao);
+}
+
+.changelog-card:hover {
+  box-shadow: var(--sombra);
+  border-color: var(--azul-medio);
+}
+
+.changelog-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp-3);
+  flex-wrap: wrap;
+}
+
+.changelog-badges {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  flex-wrap: wrap;
+}
+
+.changelog-tempo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--texto-xs);
+  font-weight: 600;
+  color: var(--sucesso);
+  background: var(--sucesso-claro);
+  padding: 4px 10px;
+  border-radius: var(--raio-total);
+}
+
+.changelog-card h3 {
+  font-size: var(--texto-md);
+  margin-top: var(--esp-3);
+}
+
+.changelog-card h3 a {
+  color: inherit;
+}
+
+.changelog-local {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--texto-sm);
+  margin-top: 4px;
+}
+
+.changelog-rodape {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-5);
+  margin-top: var(--esp-4);
+  padding-top: var(--esp-4);
+  border-top: 1px solid var(--borda);
+  font-size: var(--texto-xs);
+  color: var(--texto-suave);
+}
+
+.changelog-rodape > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.changelog-rodape strong {
+  color: var(--azul-escuro);
+}
+
+.changelog-rodape .btn {
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .barra-lista {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ordenacao .campo-select,
+  .filtros-linha .campo-select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .filtros-linha {
+    flex-direction: column;
+  }
+
+  .filtros-linha .campo-select {
+    width: 100%;
+  }
+
+  .topo-com-acao .btn {
+    width: 100%;
+  }
+
+  .changelog::before,
+  .changelog-marcador {
+    display: none;
+  }
+
+  .changelog-rodape .btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}

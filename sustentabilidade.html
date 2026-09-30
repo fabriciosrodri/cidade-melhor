@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustentabilidade e ODS · Cidade Melhor</title>
+  <meta name="description" content="Conheça os Objetivos de Desenvolvimento Sustentável da Agenda 2030 e ações simples para o dia a dia.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/sustentabilidade.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="ods-hero">
+      <div class="container ods-hero-grade">
+        <div>
+          <span class="sobretitulo">Agenda 2030 da ONU</span>
+          <h1>Sustentabilidade começa na <span class="destaque-verde">nossa rua</span>.</h1>
+          <p>Os Objetivos de Desenvolvimento Sustentável (ODS) são 17 metas globais para acabar com a pobreza, proteger o planeta e garantir qualidade de vida para todos até 2030. Muitas delas dependem de atitudes simples, no dia a dia da cidade.</p>
+          <div class="ods-hero-botoes">
+            <a href="#acoes" class="btn btn-primario btn-lg" id="botao-acoes"></a>
+            <a href="#todos-ods" class="btn btn-secundario btn-lg">Ver os 17 ODS</a>
+          </div>
+        </div>
+        <div class="ods-hero-mosaico" id="mosaico" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- O que é a Agenda 2030 -->
+    <section class="secao">
+      <div class="container">
+        <div class="agenda-grade">
+          <div class="card card-corpo agenda-card" id="agenda-cards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ODS do projeto -->
+    <section class="secao secao-suave">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="sobretitulo">Nosso impacto</span>
+          <h2>ODS ligados ao Cidade Melhor</h2>
+          <p>Cada problema reportado no mapa contribui diretamente para estes objetivos.</p>
+        </div>
+        <div class="grade-ods-projeto" id="ods-projeto"></div>
+      </div>
+    </section>
+
+    <!-- Todos os ODS -->
+    <section class="secao" id="todos-ods">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="sobretitulo">Os 17 objetivos</span>
+          <h2>Conheça todos os ODS</h2>
+          <p>Clique em um objetivo para saber mais.</p>
+        </div>
+        <div class="grade-ods" id="grade-ods"></div>
+      </div>
+    </section>
+
+    <!-- Ações do dia a dia -->
+    <section class="secao secao-suave" id="acoes">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="sobretitulo">Na prática</span>
+          <h2>Ações que você pode fazer no dia a dia</h2>
+          <p>Pequenas atitudes, repetidas por muitas pessoas, transformam a cidade.</p>
+        </div>
+        <div class="grade-acoes" id="grade-acoes"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="secao">
+      <div class="container">
+        <div class="cta-ods" id="cta-ods"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/lucide@1.49.0/dist/umd/lucide.min.js"></script>
+  <script type="module" src="js/pages/sustentabilidade.js"></script>
+</body>
+</html>

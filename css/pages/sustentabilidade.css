@@ -1,0 +1,357 @@
+/* ===== SUSTENTABILIDADE / ODS ===== */
+.ods-hero {
+  padding: var(--esp-16) 0;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(86, 192, 43, 0.12), transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(38, 189, 226, 0.12), transparent 40%),
+    var(--fundo-suave);
+  border-bottom: 1px solid var(--borda);
+}
+
+.ods-hero-grade {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--esp-12);
+  align-items: center;
+}
+
+.ods-hero h1 {
+  font-size: var(--texto-4xl);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.destaque-verde {
+  color: #3F9E2B;
+}
+
+.ods-hero p {
+  margin-top: var(--esp-5);
+  font-size: var(--texto-lg);
+  max-width: 560px;
+}
+
+.ods-hero-botoes {
+  display: flex;
+  gap: var(--esp-3);
+  flex-wrap: wrap;
+  margin-top: var(--esp-8);
+}
+
+/* Mosaico com as cores dos 17 ODS */
+.ods-hero-mosaico {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.ods-hero-mosaico span {
+  aspect-ratio: 1;
+  border-radius: 10px;
+  background: var(--cor);
+  color: var(--branco);
+  font-weight: 800;
+  font-size: var(--texto-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--sombra-sm);
+}
+
+.ods-hero-mosaico .mosaico-logo {
+  background: var(--branco);
+  color: var(--azul);
+  border: 1px solid var(--borda);
+}
+
+/* Agenda 2030 */
+.agenda-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--esp-8);
+  padding: var(--esp-8);
+}
+
+.agenda-icone {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--raio);
+  background: var(--azul-claro);
+  color: var(--azul);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--esp-4);
+}
+
+.agenda-bloco h3 {
+  margin-bottom: var(--esp-2);
+}
+
+.agenda-bloco p {
+  font-size: var(--texto-sm);
+}
+
+/* ODS do projeto */
+.grade-ods-projeto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--esp-5);
+}
+
+.ods-projeto {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-top: 5px solid var(--cor);
+  border-radius: var(--raio-lg);
+  padding: var(--esp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+}
+
+.ods-projeto-topo {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+}
+
+.ods-projeto-numero {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--raio);
+  background: var(--cor);
+  color: var(--branco);
+  font-size: var(--texto-xl);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ods-projeto h3 {
+  font-size: var(--texto-md);
+}
+
+.ods-projeto p {
+  font-size: var(--texto-sm);
+  flex: 1;
+}
+
+.ods-projeto-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Grade com os 17 ODS */
+.grade-ods {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--esp-3);
+}
+
+.ods-card {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--esp-2);
+  padding: var(--esp-4);
+  border-radius: var(--raio);
+  background: var(--cor);
+  color: var(--branco);
+  text-align: left;
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.ods-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-lg);
+}
+
+.ods-numero {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ods-nome {
+  font-size: var(--texto-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+
+.modal-ods {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-4);
+  padding: var(--esp-4);
+  border-radius: var(--raio);
+  background: var(--cor);
+  color: var(--branco);
+  margin-bottom: var(--esp-4);
+}
+
+.modal-ods strong {
+  font-size: var(--texto-lg);
+  line-height: 1.25;
+}
+
+.modal-ods-relacao {
+  display: flex;
+  gap: var(--esp-2);
+  padding: var(--esp-3);
+  border-radius: var(--raio-sm);
+  background: var(--azul-claro);
+  color: var(--azul-escuro) !important;
+  font-size: var(--texto-sm);
+}
+
+.modal-ods-relacao .icone {
+  color: var(--azul);
+  margin-top: 3px;
+}
+
+/* Ações do dia a dia */
+.grade-acoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--esp-5);
+}
+
+.acao-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  padding: var(--esp-6);
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  transition: box-shadow var(--transicao), transform var(--transicao);
+}
+
+.acao-card:hover {
+  box-shadow: var(--sombra);
+  transform: translateY(-2px);
+}
+
+.acao-icone {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #EAF7E4;
+  color: #3F9E2B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--esp-2);
+}
+
+.acao-card h3 {
+  font-size: var(--texto-md);
+}
+
+.acao-card p {
+  font-size: var(--texto-sm);
+  flex: 1;
+}
+
+.acao-ods {
+  align-self: flex-start;
+  margin-top: var(--esp-2);
+  padding: 4px 10px;
+  border-radius: var(--raio-total);
+  background: color-mix(in srgb, var(--cor) 14%, white);
+  color: color-mix(in srgb, var(--cor) 75%, black);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* CTA */
+.cta-ods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp-8);
+  padding: var(--esp-10) var(--esp-12);
+  border-radius: var(--raio-xl);
+  background: linear-gradient(120deg, #1A5CE5, #3F9E2B);
+  color: var(--branco);
+}
+
+.cta-ods h2 {
+  color: var(--branco);
+  font-size: var(--texto-2xl);
+}
+
+.cta-ods p {
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: var(--esp-2);
+  max-width: 560px;
+}
+
+.btn-branco {
+  background: var(--branco);
+  color: var(--azul-escuro);
+}
+
+.btn-branco:hover {
+  background: #F0F4FF;
+}
+
+@media (max-width: 1080px) {
+  .ods-hero-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .ods-hero-mosaico {
+    max-width: 480px;
+  }
+
+  .agenda-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grade-ods-projeto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grade-ods {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grade-acoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ods-hero {
+    padding: var(--esp-10) 0;
+  }
+
+  .agenda-card,
+  .grade-ods-projeto,
+  .grade-acoes {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-card {
+    padding: var(--esp-6);
+    gap: var(--esp-6);
+  }
+
+  .grade-ods {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-ods {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--esp-8) var(--esp-6);
+  }
+}

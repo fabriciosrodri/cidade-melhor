@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidade Melhor · Sua cidade, nossa responsabilidade</title>
+  <meta name="description" content="Reporte problemas urbanos de Sorocaba no mapa e ajude a comunidade e os órgãos responsáveis a agirem.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Fonte Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+
+  <!-- Leaflet (mapa) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Estilos do projeto -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Sua cidade melhor começa com a sua <span class="destaque-azul">voz</span>.</h1>
+        <p class="hero-descricao">Reporte problemas da sua cidade de forma simples no mapa e ajude a comunidade e órgãos responsáveis a agirem.</p>
+        <div class="hero-botoes">
+          <a href="mapa.html" class="btn btn-primario btn-lg" id="botao-ver-mapa"></a>
+          <a href="#como-funciona" class="btn btn-secundario btn-lg" id="botao-como-funciona"></a>
+        </div>
+        <div class="hero-indicadores" id="indicadores-home" aria-live="polite">
+          <div class="skeleton" style="height:64px"></div>
+        </div>
+      </div>
+
+      <div class="hero-mapa">
+        <div id="mapa-previa" class="mapa-previa" aria-label="Prévia do mapa de Sorocaba com problemas reportados"></div>
+        <div class="previa-busca" aria-hidden="true" id="previa-busca"></div>
+        <a href="reportar.html" class="btn btn-secundario previa-reportar" id="botao-previa-reportar"></a>
+      </div>
+    </section>
+
+    <!-- ===== COMO FUNCIONA ===== -->
+    <section class="secao secao-suave" id="como-funciona">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="sobretitulo">Passo a passo</span>
+          <h2>Como funciona</h2>
+          <p>Em poucos passos, você ajuda a transformar a sua cidade.</p>
+        </div>
+        <div class="passos" id="passos"></div>
+      </div>
+    </section>
+
+    <!-- ===== O QUE PODE SER REPORTADO ===== -->
+    <section class="secao">
+      <div class="container">
+        <div class="secao-cabecalho">
+          <span class="sobretitulo">Categorias</span>
+          <h2>O que você pode reportar</h2>
+          <p>Cada tipo de problema tem uma cor e um ícone próprios no mapa.</p>
+        </div>
+        <div class="grade-categorias" id="grade-categorias"></div>
+      </div>
+    </section>
+
+    <!-- ===== EM ALTA ===== -->
+    <section class="secao secao-suave">
+      <div class="container">
+        <div class="secao-cabecalho-linha">
+          <div>
+            <span class="sobretitulo">Em alta</span>
+            <h2>Problemas mais confirmados pela comunidade</h2>
+          </div>
+          <a href="mapa.html" class="btn btn-secundario" id="botao-ver-todos"></a>
+        </div>
+        <div class="grade-em-alta" id="em-alta"></div>
+      </div>
+    </section>
+
+    <!-- ===== FAIXA FINAL ===== -->
+    <section class="secao secao-cta">
+      <div class="container">
+        <div class="faixa-cta" id="faixa-cta"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Bibliotecas (CDN) -->
+  <script src="https://unpkg.com/lucide@1.49.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Script da página -->
+  <script type="module" src="js/pages/home.js"></script>
+</body>
+</html>

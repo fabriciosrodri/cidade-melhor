@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problemas resolvidos · Cidade Melhor</title>
+  <meta name="description" content="Histórico das melhorias urbanas conquistadas pela comunidade de Sorocaba.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/listas.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="pagina-topo">
+      <div class="container">
+        <span class="sobretitulo">Changelog da cidade</span>
+        <h1>Problemas resolvidos</h1>
+        <p>O histórico das melhorias urbanas conquistadas com a participação da comunidade.</p>
+      </div>
+    </section>
+
+    <section class="pagina-conteudo">
+      <div class="container" id="conteudo">
+        <div class="indicadores" id="resumo"></div>
+        <div class="barra-lista">
+          <div class="filtros-linha">
+            <label class="sr-only" for="filtro-categoria">Categoria</label>
+            <select class="campo-select" id="filtro-categoria"></select>
+            <label class="sr-only" for="filtro-periodo">Período</label>
+            <select class="campo-select" id="filtro-periodo"></select>
+          </div>
+          <span class="resultado-contagem" id="contagem"></span>
+        </div>
+        <div id="linha-do-tempo" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://unpkg.com/lucide@1.49.0/dist/umd/lucide.min.js"></script>
+  <script type="module" src="js/pages/resolvidos.js"></script>
+</body>
+</html>

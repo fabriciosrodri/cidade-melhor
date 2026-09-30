@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar conta · Cidade Melhor</title>
+  <meta name="description" content="Crie sua conta no Cidade Melhor e ajude a melhorar Sorocaba.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/auth.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="auth">
+    <aside class="auth-lateral" id="auth-lateral"></aside>
+
+    <section class="auth-conteudo">
+      <div class="auth-card">
+        <h1>Crie sua conta</h1>
+        <p class="auth-subtitulo">É grátis e leva menos de um minuto. Sua participação faz a diferença.</p>
+
+        <form id="form-cadastro" novalidate>
+          <div class="campo">
+            <label class="campo-label" for="nome">Nome completo</label>
+            <div class="campo-com-icone" data-icone="user">
+              <input class="campo-input" type="text" id="nome" placeholder="Como você quer ser chamado" autocomplete="name" maxlength="60" required>
+            </div>
+            <p class="campo-erro"></p>
+          </div>
+
+          <div class="campo">
+            <label class="campo-label" for="email">E-mail</label>
+            <div class="campo-com-icone" data-icone="mail">
+              <input class="campo-input" type="email" id="email" placeholder="seu@email.com" autocomplete="email" required>
+            </div>
+            <p class="campo-erro"></p>
+          </div>
+
+          <div class="linha-campos">
+            <div class="campo">
+              <label class="campo-label" for="senha">Senha</label>
+              <div class="campo-com-icone" data-icone="lock">
+                <input class="campo-input" type="password" id="senha" placeholder="Mínimo 6 caracteres" autocomplete="new-password" required>
+                <button type="button" class="btn-icone" data-mostrar-senha="senha" aria-label="Mostrar senha"></button>
+              </div>
+              <p class="campo-erro"></p>
+            </div>
+            <div class="campo">
+              <label class="campo-label" for="confirmar-senha">Confirmar senha</label>
+              <div class="campo-com-icone" data-icone="lock">
+                <input class="campo-input" type="password" id="confirmar-senha" placeholder="Repita a senha" autocomplete="new-password" required>
+              </div>
+              <p class="campo-erro"></p>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label class="checkbox"><input type="checkbox" id="termos"> <span>Li e aceito os <button type="button" class="link-botao" id="ver-termos">termos de uso</button> da plataforma.</span></label>
+            <p class="campo-erro" id="erro-termos"></p>
+          </div>
+
+          <div class="auth-alerta" id="erro-cadastro" role="alert" hidden></div>
+
+          <button type="submit" class="btn btn-primario btn-lg btn-bloco" id="botao-cadastrar">Criar conta</button>
+        </form>
+
+        <p class="auth-rodape">Já tem conta? <a href="login.html" id="link-login">Entrar</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/lucide@1.49.0/dist/umd/lucide.min.js"></script>
+  <script type="module" src="js/pages/cadastro.js"></script>
+</body>
+</html>
